@@ -1,0 +1,25 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+
+# Entorno virtual de Python
+IA_Accenture.venv/
+.venv/
+venv/
+
+# Claves API y contraseñas
+.env
+.env.*
+!.env.example
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Configuración local
+.vscode/
+
+# Archivos temporales
+*.log
+.DS_Store
+Thumbs.db
+
