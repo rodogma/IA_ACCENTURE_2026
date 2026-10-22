@@ -1,6 +1,6 @@
 {
   "modelo": "gemini-3.5-flash-lite",
-  "fecha_utc": "2026-10-22T22:30:20.868295+00:00",
+  "fecha_utc": "2026-10-22T23:03:10.200154+00:00",
   "repeticiones_por_prompt": 3,
   "resultados": {
     "clasificar_sentimiento": {
@@ -54,7 +54,7 @@
           "respuesta": {
             "lugares": [
               "Santiago",
-              "Valparaíso",
+              "Valpara'Valparaíso",
               "Viña del Mar"
             ]
           }
@@ -64,7 +64,7 @@
           "respuesta": {
             "lugares": [
               "Santiago",
-              "Valparaiso",
+              "Valparaíso",
               "Viña del Mar"
             ]
           }
@@ -81,7 +81,7 @@
         {
           "intento": 1,
           "respuesta": {
-            "resumen": "El equipo revisó los documentos por la mañana, identificó dos observaciones y acordó corregirlas antes del viernes."
+            "resumen": "El equipo revisó los documentos durante la mañana, identificó dos observaciones y acordó corregirlas antes del viernes."
           }
         },
         {

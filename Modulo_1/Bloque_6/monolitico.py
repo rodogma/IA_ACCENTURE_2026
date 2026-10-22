@@ -6,7 +6,7 @@ from cprint import cprint
 load_dotenv()
 
 def obtener_dato_de_prueba(pregunta):
-    api_key = os.getenv("AI_API_KEY")
+    api_key = os.getenv("GEMINI_API_KEY")
     modelo = "gemini-3.5-flash-lite"
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{modelo}:generateContent?key={api_key}"
     body = {"contents": [{"parts": [{"text": pregunta}]}]}
@@ -15,7 +15,7 @@ def obtener_dato_de_prueba(pregunta):
     return datos["candidates"][0]["content"]["parts"][0]["text"]
 
 def armar_peticion(pregunta):
-    api_key = os.getenv("AI_API_KEY")
+    api_key = os.getenv("GEMINI_API_KEY")
     modelo = "gemini-3.5-flash-lite"
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{modelo}:generateContent?key={api_key}"
     body = {"contents": [{"parts": [{"text": pregunta}]}]}
