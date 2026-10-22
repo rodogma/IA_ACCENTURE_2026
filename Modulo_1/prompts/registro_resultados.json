@@ -1,0 +1,109 @@
+{
+  "modelo": "gemini-3.5-flash-lite",
+  "fecha_utc": "2026-10-22T22:30:20.868295+00:00",
+  "repeticiones_por_prompt": 3,
+  "resultados": {
+    "clasificar_sentimiento": {
+      "exitos": 3,
+      "intentos": 3,
+      "fallos": 0,
+      "tasa_consistencia_pct": 100.0,
+      "respuestas_validas": [
+        {
+          "intento": 1,
+          "respuesta": {
+            "sentimiento": "positivo",
+            "confianza": 0.99
+          }
+        },
+        {
+          "intento": 2,
+          "respuesta": {
+            "sentimiento": "positivo",
+            "confianza": 0.99
+          }
+        },
+        {
+          "intento": 3,
+          "respuesta": {
+            "sentimiento": "positivo",
+            "confianza": 0.99
+          }
+        }
+      ],
+      "detalle_fallos": []
+    },
+    "extraer_entidades": {
+      "exitos": 3,
+      "intentos": 3,
+      "fallos": 0,
+      "tasa_consistencia_pct": 100.0,
+      "respuestas_validas": [
+        {
+          "intento": 1,
+          "respuesta": {
+            "lugares": [
+              "Santiago",
+              "Valparaíso",
+              "Viña del Mar"
+            ]
+          }
+        },
+        {
+          "intento": 2,
+          "respuesta": {
+            "lugares": [
+              "Santiago",
+              "Valparaíso",
+              "Viña del Mar"
+            ]
+          }
+        },
+        {
+          "intento": 3,
+          "respuesta": {
+            "lugares": [
+              "Santiago",
+              "Valparaiso",
+              "Viña del Mar"
+            ]
+          }
+        }
+      ],
+      "detalle_fallos": []
+    },
+    "resumen_corto": {
+      "exitos": 3,
+      "intentos": 3,
+      "fallos": 0,
+      "tasa_consistencia_pct": 100.0,
+      "respuestas_validas": [
+        {
+          "intento": 1,
+          "respuesta": {
+            "resumen": "El equipo revisó los documentos por la mañana, identificó dos observaciones y acordó corregirlas antes del viernes."
+          }
+        },
+        {
+          "intento": 2,
+          "respuesta": {
+            "resumen": "El equipo revisó los documentos por la mañana, identificó dos observaciones y acordó corregirlas antes del viernes."
+          }
+        },
+        {
+          "intento": 3,
+          "respuesta": {
+            "resumen": "El equipo revisó los documentos por la mañana, identificó dos observaciones y acordó corregirlas antes del viernes."
+          }
+        }
+      ],
+      "detalle_fallos": []
+    }
+  },
+  "resumen_general": {
+    "total_intentos": 9,
+    "total_exitos": 9,
+    "total_fallos": 0,
+    "tasa_consistencia_pct": 100.0
+  }
+}
