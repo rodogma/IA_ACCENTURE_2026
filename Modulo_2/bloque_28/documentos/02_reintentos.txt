@@ -1,0 +1,10 @@
+DOCUMENTO DE EJEMPLO PARA PRACTICAR RAG - BLOQUE 28
+Tema: Reintentos y backoff
+
+Un sistema de reintentos ejecuta nuevamente una operación cuando falla por un motivo temporal. Se suele configurar una cantidad máxima de intentos. Por ejemplo, con tres intentos totales, la operación se ejecuta como máximo tres veces, y puede haber dos esperas entre intentos.
+
+El backoff exponencial aumenta el tiempo de espera entre intentos. Una fórmula ilustrativa es espera_base * 2 ** numero_de_reintento. Esto ayuda a reducir la presión sobre un servicio que está saturado.
+
+Las excepciones de tipo ValueError suelen representar entradas inválidas o problemas que no se corrigen reintentando. En ese caso, es preferible detenerse y comunicar el error.
+
+Para probar esta lógica sin llamar a una API real, se pueden usar mocks de Python y sustituir time.sleep por una función simulada. La actividad del Bloque 28, en cambio, requiere medir llamadas reales de embeddings y generación.

@@ -1,0 +1,8 @@
+DOCUMENTO DE EJEMPLO PARA PRACTICAR RAG - BLOQUE 28
+Tema: TimeoutError en un cliente de API Python
+
+Un TimeoutError indica que una operación superó el tiempo de espera permitido o que el cliente decidió tratar una condición transitoria como un fallo reintentable. En un cliente de API, pueden considerarse transitorios los errores de límite de solicitudes (HTTP 429) y ciertos errores del servidor (HTTP 5xx), dependiendo del diseño del cliente.
+
+Una estrategia común consiste en capturar TimeoutError, volver a intentar la operación un número limitado de veces y, si se agotan los intentos, propagar el error o convertirlo en un RuntimeError con un mensaje útil. Los errores permanentes, como una credencial inválida (HTTP 401 o 403), normalmente no se resuelven repitiendo la misma petición.
+
+Este texto es material didáctico de ejemplo; no describe ni verifica automáticamente la implementación concreta del proyecto del estudiante.

@@ -1,0 +1,14 @@
+DOCUMENTO DE EJEMPLO PARA PRACTICAR RAG - BLOQUE 28
+Tema: Tokens, costos y latencia de un flujo RAG
+
+Un flujo RAG (generación aumentada por recuperación) transforma la consulta del usuario en un embedding, recupera fragmentos relevantes desde una base vectorial y envía esos fragmentos como contexto a un modelo generativo.
+
+La latencia puede medirse con time.perf_counter() antes y después de cada etapa. Es útil registrar por separado el embedding y la búsqueda vectorial, y la generación de la respuesta. El tiempo total también puede incluir inicialización y preparación de datos.
+
+LangChain puede exponer usage_metadata en la respuesta del modelo. Sus campos habituales son input_tokens, output_tokens y total_tokens. Esos valores corresponden al consumo reportado para la llamada de generación, no necesariamente al consumo de las llamadas de embeddings.
+
+El costo monetario estimado de la generación se calcula aplicando las tarifas vigentes del modelo a los tokens de entrada y salida. Para obtener el costo completo del RAG hay que considerar también las llamadas de embeddings y cualquier otro servicio facturable.
+
+Aumentar k permite recuperar más fragmentos, pero no garantiza más tokens de entrada: depende de cuántos fragmentos existan, sus tamaños y el contenido final del prompt. Para comparar k=3 y k=6, se deben ejecutar ambas consultas y observar los valores reales.
+
+Un archivo JSONL almacena un objeto JSON por línea. Puede guardar timestamp, pregunta, k, tiempos_ms, tiempo_total_ms y tokens para comparar ejecuciones futuras.
