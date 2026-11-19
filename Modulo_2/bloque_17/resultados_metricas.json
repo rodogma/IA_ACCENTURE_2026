@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "consulta": "¿Qué es Python?",
+    "referencia": "Python es un lenguaje de programación.",
+    "respuesta": "Python es un lenguaje de programación de alto nivel, versátil y fácil de aprender, ampliamente utilizado para el desarrollo web, análisis de datos e inteligencia artificial.",
+    "precision": 0.2308,
+    "cobertura": 1.0,
+    "f1": 0.375
+  },
+  {
+    "id": 2,
+    "consulta": "¿Qué es una variable?",
+    "referencia": "Una variable almacena un valor.",
+    "respuesta": "Una variable es un espacio de memoria destinado a almacenar un valor que puede cambiar durante la ejecución de un programa.",
+    "precision": 0.1905,
+    "cobertura": 0.8,
+    "f1": 0.3077
+  },
+  {
+    "id": 3,
+    "consulta": "¿Qué es una función?",
+    "referencia": "Una función es un bloque de código reutilizable.",
+    "respuesta": "Una función es una relación que asigna a cada elemento de un conjunto de entrada exactamente un elemento de un conjunto de salida.",
+    "precision": 0.2174,
+    "cobertura": 0.625,
+    "f1": 0.3226
+  },
+  {
+    "id": 4,
+    "consulta": "¿Qué es una lista en Python?",
+    "referencia": "Una lista es una colección ordenada y mutable.",
+    "respuesta": "Una lista en Python es una estructura de datos mutable y ordenada que permite almacenar una colección de elementos de diversos tipos bajo un mismo nombre.",
+    "precision": 0.3077,
+    "cobertura": 1.0,
+    "f1": 0.4706
+  },
+  {
+    "id": 5,
+    "consulta": "¿Qué es una tupla?",
+    "referencia": "Una tupla es una colección ordenada e inmutable.",
+    "respuesta": "Una tupla es una estructura de datos ordenada e inmutable que permite almacenar una colección de elementos de diversos tipos.",
+    "precision": 0.4,
+    "cobertura": 1.0,
+    "f1": 0.5714
+  },
+  {
+    "id": 6,
+    "consulta": "¿Qué es un diccionario?",
+    "referencia": "Un diccionario almacena pares de clave y valor.",
+    "respuesta": "Un diccionario es una obra de consulta que recopila y define las palabras de una lengua, ordenadas generalmente de forma alfabética.",
+    "precision": 0.1905,
+    "cobertura": 0.5,
+    "f1": 0.2759
+  },
+  {
+    "id": 7,
+    "consulta": "¿Qué es un bucle for?",
+    "referencia": "Un bucle for permite iterar sobre elementos.",
+    "respuesta": "Un bucle `for` es una estructura de control que permite repetir un bloque de código un número determinado de veces o recorrer los elementos de una colección.",
+    "precision": 0.1852,
+    "cobertura": 0.7143,
+    "f1": 0.2941
+  },
+  {
+    "id": 8,
+    "consulta": "¿Qué es un bucle while?",
+    "referencia": "Un bucle while repite instrucciones mientras una condición sea verdadera.",
+    "respuesta": "Un bucle `while` es una estructura de control que repite un bloque de código continuamente mientras se cumpla una condición específica.",
+    "precision": 0.3333,
+    "cobertura": 0.7,
+    "f1": 0.4516
+  },
+  {
+    "id": 9,
+    "consulta": "¿Qué es una clase?",
+    "referencia": "Una clase define atributos y métodos de objetos.",
+    "respuesta": "Una clase es una plantilla o molde que define las propiedades y comportamientos comunes que tendrán los objetos creados a partir de ella.",
+    "precision": 0.2609,
+    "cobertura": 0.75,
+    "f1": 0.3871
+  },
+  {
+    "id": 10,
+    "consulta": "¿Qué es un objeto?",
+    "referencia": "Un objeto es una instancia de una clase.",
+    "respuesta": "Un objeto es una entidad que combina datos (atributos) y comportamientos (métodos) relacionados entre sí.",
+    "precision": 0.2667,
+    "cobertura": 0.5,
+    "f1": 0.3478
+  },
+  {
+    "id": 11,
+    "consulta": "¿Qué es una cadena de texto?",
+    "referencia": "Una cadena es una secuencia de caracteres.",
+    "respuesta": "Una cadena de texto es una secuencia ordenada de caracteres, como letras, números o símbolos, que se utiliza para representar información textual en programación.",
+    "precision": 0.2917,
+    "cobertura": 1.0,
+    "f1": 0.4516
+  },
+  {
+    "id": 12,
+    "consulta": "¿Qué es un booleano?",
+    "referencia": "Un booleano representa verdadero o falso.",
+    "respuesta": "Un booleano es un tipo de dato lógico que solo puede representar uno de dos valores: verdadero (*true*) o falso (*false*).",
+    "precision": 0.2381,
+    "cobertura": 0.8333,
+    "f1": 0.3704
+  },
+  {
+    "id": 13,
+    "consulta": "¿Qué es una excepción?",
+    "referencia": "Una excepción representa un error durante la ejecución.",
+    "respuesta": "Una excepción es un evento inesperado que interrumpe el flujo normal de ejecución de un programa.",
+    "precision": 0.25,
+    "cobertura": 0.5,
+    "f1": 0.3333
+  },
+  {
+    "id": 14,
+    "consulta": "¿Qué es un módulo?",
+    "referencia": "Un módulo es un archivo con código Python.",
+    "respuesta": "Un módulo es una unidad independiente y reutilizable de código que agrupa funciones, datos o componentes relacionados para facilitar el desarrollo y mantenimiento de un programa.",
+    "precision": 0.1923,
+    "cobertura": 0.625,
+    "f1": 0.2941
+  },
+  {
+    "id": 15,
+    "consulta": "¿Qué es una biblioteca?",
+    "referencia": "Una biblioteca reúne módulos y funcionalidades reutilizables.",
+    "respuesta": "Una biblioteca es un espacio organizado destinado a la conservación, consulta y préstamo de libros y otros recursos informativos.",
+    "precision": 0.1579,
+    "cobertura": 0.4286,
+    "f1": 0.2308
+  },
+  {
+    "id": 16,
+    "consulta": "¿Qué es pip?",
+    "referencia": "Pip es un gestor de paquetes de Python.",
+    "respuesta": "**Pip** es el gestor de paquetes estándar utilizado para instalar y administrar bibliotecas y programas escritos en el lenguaje de programación Python.",
+    "precision": 0.3182,
+    "cobertura": 0.875,
+    "f1": 0.4667
+  },
+  {
+    "id": 17,
+    "consulta": "¿Qué es pytest?",
+    "referencia": "Pytest es una herramienta para ejecutar pruebas en Python.",
+    "respuesta": "**Pytest** es un framework de pruebas para Python que permite escribir tests sencillos y escalables de forma eficiente.",
+    "precision": 0.2778,
+    "cobertura": 0.5556,
+    "f1": 0.3704
+  },
+  {
+    "id": 18,
+    "consulta": "¿Qué es una API?",
+    "referencia": "Una API permite la comunicación entre aplicaciones.",
+    "respuesta": "Una API es un conjunto de reglas que permite que dos aplicaciones se comuniquen y compartan información entre sí.",
+    "precision": 0.2632,
+    "cobertura": 0.7143,
+    "f1": 0.3846
+  },
+  {
+    "id": 19,
+    "consulta": "¿Qué es JSON?",
+    "referencia": "JSON es un formato de intercambio de datos.",
+    "respuesta": "JSON es un formato ligero de intercambio de datos basado en texto, fácil de leer y escribir para humanos y sencillo de procesar para las máquinas.",
+    "precision": 0.3077,
+    "cobertura": 1.0,
+    "f1": 0.4706
+  },
+  {
+    "id": 20,
+    "consulta": "¿Qué es Git?",
+    "referencia": "Git es un sistema de control de versiones.",
+    "respuesta": "Git es un sistema de control de versiones distribuido que permite registrar los cambios realizados en archivos y coordinar el trabajo entre varias personas.",
+    "precision": 0.3333,
+    "cobertura": 1.0,
+    "f1": 0.5
+  }
+]

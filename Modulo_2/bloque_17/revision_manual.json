@@ -1,0 +1,112 @@
+[
+  {
+    "id": 15,
+    "consulta": "¿Qué es una biblioteca?",
+    "referencia": "Una biblioteca reúne módulos y funcionalidades reutilizables.",
+    "respuesta": "Una biblioteca es un espacio organizado destinado a la conservación, consulta y préstamo de libros y otros recursos informativos.",
+    "f1": 0.2308,
+    "correccion_factual": "no",
+    "completitud": "no",
+    "contradiccion": "si",
+    "nota": "Gemini interpretó biblioteca como un lugar destinado a guardar y prestar libros, pero la referencia se refiere a una biblioteca de programación que reúne módulos y funcionalidades reutilizables. La respuesta no corresponde al contexto esperado y su F1 es 0.2308."
+  },
+  {
+    "id": 6,
+    "consulta": "¿Qué es un diccionario?",
+    "referencia": "Un diccionario almacena pares de clave y valor.",
+    "respuesta": "Un diccionario es una obra de consulta que recopila y define las palabras de una lengua, ordenadas generalmente de forma alfabética.",
+    "f1": 0.2759,
+    "correccion_factual": "no",
+    "completitud": "no",
+    "contradiccion": "no",
+    "nota": "Gemini interpretó diccionario como una obra de consulta de palabras, en lugar de una estructura de datos de Python. Aunque la definición es verdadera en otro contexto, no responde al concepto esperado de pares de clave y valor. Su F1 es 0.2759."
+  },
+  {
+    "id": 7,
+    "consulta": "¿Qué es un bucle for?",
+    "referencia": "Un bucle for permite iterar sobre elementos.",
+    "respuesta": "Un bucle `for` es una estructura de control que permite repetir un bloque de código un número determinado de veces o recorrer los elementos de una colección.",
+    "f1": 0.2941,
+    "correccion_factual": "si",
+    "completitud": "si",
+    "contradiccion": "no",
+    "nota": "La respuesta explica correctamente que un bucle for permite recorrer elementos de una colección y repetir instrucciones. Es completa y no contradice la referencia. Aunque el F1 es bajo (0.2941), el contenido es correcto porque utiliza una explicación más extensa."
+  },
+  {
+    "id": 14,
+    "consulta": "¿Qué es un módulo?",
+    "referencia": "Un módulo es un archivo con código Python.",
+    "respuesta": "Un módulo es una unidad independiente y reutilizable de código que agrupa funciones, datos o componentes relacionados para facilitar el desarrollo y mantenimiento de un programa.",
+    "f1": 0.2941,
+    "correccion_factual": "si",
+    "completitud": "no",
+    "contradiccion": "no",
+    "nota": "La respuesta describe correctamente un módulo como una unidad reutilizable de código, pero es demasiado general. No especifica que en Python un módulo es un archivo que contiene código. No contradice la referencia, aunque omite ese detalle importante. Su F1 es 0.2941."
+  },
+  {
+    "id": 2,
+    "consulta": "¿Qué es una variable?",
+    "referencia": "Una variable almacena un valor.",
+    "respuesta": "Una variable es un espacio de memoria destinado a almacenar un valor que puede cambiar durante la ejecución de un programa.",
+    "f1": 0.3077,
+    "correccion_factual": "si",
+    "completitud": "si",
+    "contradiccion": "no",
+    "nota": "La respuesta explica correctamente que una variable permite almacenar un valor que puede cambiar durante la ejecución de un programa. Es completa y no contradice la referencia. Aunque su F1 es bajo (0.3077), la explicación es válida y aporta información adicional."
+  },
+  {
+    "id": 16,
+    "consulta": "¿Qué es pip?",
+    "referencia": "Pip es un gestor de paquetes de Python.",
+    "respuesta": "**Pip** es el gestor de paquetes estándar utilizado para instalar y administrar bibliotecas y programas escritos en el lenguaje de programación Python.",
+    "f1": 0.4667,
+    "correccion_factual": "si",
+    "completitud": "si",
+    "contradiccion": "no",
+    "nota": "La respuesta explica correctamente que pip es el gestor de paquetes de Python y que permite instalar y administrar bibliotecas. Es completa y no contradice la referencia. Su F1 de 0.4667 indica una coincidencia parcial de palabras, aunque el contenido es correcto."
+  },
+  {
+    "id": 4,
+    "consulta": "¿Qué es una lista en Python?",
+    "referencia": "Una lista es una colección ordenada y mutable.",
+    "respuesta": "Una lista en Python es una estructura de datos mutable y ordenada que permite almacenar una colección de elementos de diversos tipos bajo un mismo nombre.",
+    "f1": 0.4706,
+    "correccion_factual": "si",
+    "completitud": "si",
+    "contradiccion": "no",
+    "nota": "La respuesta describe correctamente una lista en Python como una estructura de datos ordenada y mutable. Además, explica que permite almacenar elementos de distintos tipos. Es completa y no contradice la referencia. Su F1 de 0.4706 refleja una coincidencia parcial de palabras, aunque el contenido es correcto."
+  },
+  {
+    "id": 19,
+    "consulta": "¿Qué es JSON?",
+    "referencia": "JSON es un formato de intercambio de datos.",
+    "respuesta": "JSON es un formato ligero de intercambio de datos basado en texto, fácil de leer y escribir para humanos y sencillo de procesar para las máquinas.",
+    "f1": 0.4706,
+    "correccion_factual": "si",
+    "completitud": "si",
+    "contradiccion": "no",
+    "nota": "La respuesta explica correctamente que JSON es un formato ligero de intercambio de datos basado en texto. Agrega información útil sobre su facilidad de lectura y procesamiento. Es completa y no contradice la referencia. Su F1 de 0.4706 refleja una coincidencia parcial de palabras, aunque el contenido es correcto."
+  },
+  {
+    "id": 20,
+    "consulta": "¿Qué es Git?",
+    "referencia": "Git es un sistema de control de versiones.",
+    "respuesta": "Git es un sistema de control de versiones distribuido que permite registrar los cambios realizados en archivos y coordinar el trabajo entre varias personas.",
+    "f1": 0.5,
+    "correccion_factual": "si",
+    "completitud": "si",
+    "contradiccion": "no",
+    "nota": "La respuesta describe correctamente Git como un sistema de control de versiones distribuido. Explica que permite registrar cambios en archivos y coordinar el trabajo colaborativo. Es completa y no contradice la referencia. Su F1 de 0.5000 muestra una coincidencia parcial de palabras, aunque el contenido es correcto."
+  },
+  {
+    "id": 5,
+    "consulta": "¿Qué es una tupla?",
+    "referencia": "Una tupla es una colección ordenada e inmutable.",
+    "respuesta": "Una tupla es una estructura de datos ordenada e inmutable que permite almacenar una colección de elementos de diversos tipos.",
+    "f1": 0.5714,
+    "correccion_factual": "si",
+    "completitud": "si",
+    "contradiccion": "no",
+    "nota": "La respuesta explica correctamente que una tupla en Python es una estructura de datos ordenada e inmutable. Además, indica que permite almacenar elementos de diferentes tipos. Es completa y no contradice la referencia. Su F1 de 0.5714 es el más alto de los 20 casos evaluados."
+  }
+]
