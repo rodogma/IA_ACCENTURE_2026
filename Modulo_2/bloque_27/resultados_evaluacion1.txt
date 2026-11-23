@@ -1,0 +1,14 @@
+Fecha: 2026-11-23T16:50:55
+Configuracion: k=3, chunk_size=250, chunk_overlap=30
+
+0.33  1.00  ¿Que maquinaria sirve para nivelar terrenos?
+0.33  1.00  ¿Que equipo se utiliza para mover tierra?
+0.33  1.00  ¿Que maquinaria se usa para construir cimientos?
+0.33  1.00  ¿Como funciona un agente con herramientas?
+0.33  1.00  ¿Como elige un agente una herramienta?
+0.33  1.00  ¿Como recuerda un agente una conversacion?
+0.33  1.00  ¿Cuando se necesita aprobacion humana?
+0.33  1.00  ¿Como se controlan operaciones de riesgo?
+0.00  n/a  ¿Cual es la temperatura de Marte hoy?
+
+promedio -> precision: 0.296  recall: 1.000
