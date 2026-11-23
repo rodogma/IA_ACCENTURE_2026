@@ -1,3 +1,4 @@
+
 # Created by venv; see https://docs.python.org/3/library/venv.html
 
 # Entorno virtual de Python
@@ -23,3 +24,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# Bases de datos vectoriales de Chroma - Bloque 24
+**/vectorstore/
+**/chroma_db/
