@@ -1,0 +1,245 @@
+
+import os
+import time
+
+from dotenv import load_dotenv
+from cprint import cprint
+
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.runnables import (
+    Runnable,
+    RunnableBranch,
+    RunnablePassthrough,
+    RunnableLambda,
+)
+
+# ==========================================
+# 1. VARIABLES DE ENTORNO
+# ==========================================
+
+load_dotenv()
+
+API_KEY = os.getenv("GEMINI_API_KEY")
+MODELO = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
+
+
+# ==========================================
+# 2. PLANTILLA DE CLASIFICACION
+# ==========================================
+
+plantilla_clasificacion = PromptTemplate.from_template(
+    "Clasifica el siguiente mensaje de soporte en una sola "
+    "palabra: pregunta, queja o sugerencia. "
+    "Responde solo con esa palabra.\n\n{mensaje}"
+)
+
+
+# ==========================================
+# 3. CONVERTIR A RUNNABLE
+# ==========================================
+
+def convertir_a_runnable(cadena):
+
+    if cadena is None:
+        return RunnablePassthrough()
+
+    if isinstance(cadena, Runnable):
+        return cadena
+
+    return RunnableLambda(cadena)
+
+
+# ==========================================
+# 4. CLASIFICACION
+# ==========================================
+
+def construir_paso_clasificacion(modelo):
+
+    modelo = convertir_a_runnable(modelo)
+
+    return (
+        plantilla_clasificacion
+        | modelo
+        | StrOutputParser()
+        | RunnableLambda(
+            lambda texto: texto.strip().lower()
+        )
+    )
+
+
+# ==========================================
+# 5. ENRUTAMIENTO
+# ==========================================
+
+def construir_cadena_con_enrutamiento(
+    paso_clasificacion,
+    cadena_queja=None,
+    cadena_sugerencia=None,
+    cadena_pregunta=None,
+):
+
+    paso_clasificacion = convertir_a_runnable(
+        paso_clasificacion
+    )
+
+    cadena_queja = convertir_a_runnable(cadena_queja)
+    cadena_sugerencia = convertir_a_runnable(cadena_sugerencia)
+    cadena_pregunta = convertir_a_runnable(cadena_pregunta)
+
+    bifurcacion = RunnableBranch(
+        (
+            lambda x: x["categoria"] == "queja",
+            cadena_queja,
+        ),
+        (
+            lambda x: x["categoria"] == "sugerencia",
+            cadena_sugerencia,
+        ),
+        cadena_pregunta,
+    )
+
+    return (
+        RunnablePassthrough.assign(
+            categoria=paso_clasificacion
+        )
+        | bifurcacion
+    )
+
+
+# ==========================================
+# 6. CREAR MODELO GEMINI
+# ==========================================
+
+def crear_modelo():
+
+    if not API_KEY:
+        raise ValueError(
+            "No se encontró GEMINI_API_KEY en el archivo .env"
+        )
+
+    return ChatGoogleGenerativeAI(
+        model=MODELO,
+        google_api_key=API_KEY,
+        max_retries=2,
+        timeout=30,
+    )
+
+
+# ==========================================
+# 7. CREAR CADENAS DE RESPUESTA
+# ==========================================
+
+def crear_cadena_completa(modelo):
+
+    cadena_pregunta = (
+        PromptTemplate.from_template(
+            "Responde esta pregunta técnica con precisión:"
+            "\n\n{mensaje}"
+        )
+        | modelo
+        | StrOutputParser()
+    )
+
+    cadena_queja = (
+        PromptTemplate.from_template(
+            "Responde a esta queja con empatía, "
+            "reconociendo el problema antes de "
+            "ofrecer una solución:\n\n{mensaje}"
+        )
+        | modelo
+        | StrOutputParser()
+    )
+
+    cadena_sugerencia = (
+        PromptTemplate.from_template(
+            "Agradece esta sugerencia y explica "
+            "cómo se evaluará dentro del producto:"
+            "\n\n{mensaje}"
+        )
+        | modelo
+        | StrOutputParser()
+    )
+
+    paso_clasificacion = construir_paso_clasificacion(
+        modelo
+    )
+
+    return construir_cadena_con_enrutamiento(
+        paso_clasificacion=paso_clasificacion,
+        cadena_queja=cadena_queja,
+        cadena_sugerencia=cadena_sugerencia,
+        cadena_pregunta=cadena_pregunta,
+    )
+
+
+# ==========================================
+# 8. EJECUTAR CON GEMINI
+# ==========================================
+
+def ejecutar_con_gemini(texto):
+
+    modelo = crear_modelo()
+    cadena = crear_cadena_completa(modelo)
+
+    for intento in range(1, 4):
+
+        try:
+            print(f"\nIntento {intento}/3")
+
+            resultado = cadena.invoke({
+                "mensaje": texto
+            })
+
+            print("\nConexión exitosa con Gemini")
+            return resultado
+
+        except Exception as error:
+
+            mensaje_error = str(error)
+
+            if (
+                "503" in mensaje_error
+                or "UNAVAILABLE" in mensaje_error
+            ):
+                print(
+                    "Gemini está temporalmente saturado."
+                )
+
+                if intento < 3:
+                    time.sleep(5 * intento)
+
+            else:
+                print("\nError de conexión:")
+                print(error)
+                return None
+
+    print("\nNo fue posible conectar con Gemini.")
+    return None
+
+
+# ==========================================
+# 9. PROGRAMA PRINCIPAL
+# ==========================================
+
+if __name__ == "__main__":
+
+    texto = "Pueden aplicar una fuente más grande?"
+
+    print("\n================================")
+    print("SISTEMA DE SOPORTE CON LANGCHAIN")
+    print("================================")
+
+    print("\nMensaje recibido:", texto)
+    print("Modelo:", MODELO)
+
+    resultado = ejecutar_con_gemini(texto)
+
+    if resultado is not None:
+        print("\nRespuesta:")
+        cprint.fatal(resultado)
+    else:
+        print(
+            "\nNo se obtuvo respuesta del modelo."
+        )
