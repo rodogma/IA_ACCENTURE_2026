@@ -61,10 +61,12 @@ La consulta real recupera el primer resultado por defecto (`RAG_K=1`), filtra do
 python ".\Gate 2\servicio_rag.py" --evaluar
 python ".\Gate 2\servicio_rag.py" --verificar-filtro
 python ".\Gate 2\servicio_rag.py" --supervisar
-python -m pytest test_gate2.py -v
+python -m pytest -q test_gate2.py
 ```
 
 `--evaluar` consulta el índice persistido con cinco preguntas del corpus y reporta precision, recall y F1 en `@1` y `@3`. Cada pregunta tiene una fuente relevante etiquetada; el JSON indica esta definición. `--verificar-filtro` comprueba una cadena normal y una instrucción de inyección sin llamar a Gemini. `--supervisar` pausa el grafo LangGraph con `interrupt()` y espera la decisión humana para reanudar con `Command(resume=...)`. Las pruebas automáticas usan un store/LLM simulados para no consumir API; la consulta real se conserva como evidencia aparte.
+
+Ejecuta el comando de pytest desde la raíz del repositorio. `test_gate2.py` valida únicamente Gate 2. El repositorio también conserva pruebas de bloques anteriores que importan módulos locales suponiendo que se ejecutan desde la carpeta de cada bloque; por eso, `python -m pytest` sin ruta no es una verificación válida de Gate 2 y puede fallar durante la colección por esas dependencias históricas.
 
 ## Archivos de evidencia
 

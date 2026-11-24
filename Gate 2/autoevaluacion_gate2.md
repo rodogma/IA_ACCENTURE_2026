@@ -34,8 +34,10 @@ python ".\Gate 2\servicio_rag.py" --pregunta "¿Que maquinaria recomienda el cor
 python ".\Gate 2\servicio_rag.py" --evaluar
 python ".\Gate 2\servicio_rag.py" --verificar-filtro
 python ".\Gate 2\servicio_rag.py" --supervisar
-python -m pytest test_gate2.py -v
+python -m pytest -q test_gate2.py
 git status --short
 ```
 
 Configura `.env` localmente antes de la consulta real y no lo agregues al commit. Comprueba que el indice persistido del Bloque 24 exista y tenga documentos. Revisa los cambios antes de crear el commit de entrega.
+
+El comando de pytest se ejecuta desde la raiz y valida la suite propia de Gate 2. Las pruebas historicas de otros bloques pueden requerir ejecutarse desde sus carpetas porque usan imports locales; no se consideran parte de esta verificacion.
