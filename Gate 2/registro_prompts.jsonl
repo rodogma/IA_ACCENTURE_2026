@@ -1,0 +1,3 @@
+{"nombre": "prompt_rag", "huella": "b37784a61616", "fecha": "2026-11-24T12:15:23.124896+00:00"}
+{"nombre": "prompt_rag", "version": "v1-referencia", "huella": "34822503df0a", "estado": "referencia_no_desplegada", "nota": "Prompt base documentado para comparar cambios; no corresponde a una corrida activa.", "fecha": "2026-11-24T13:45:02.260941+00:00"}
+{"nombre": "prompt_rag", "version": "v2-activa", "huella": "b37784a61616", "estado": "activa_sujeta_a_aprobacion", "nota": "Prompt del servicio con proteccion contra instrucciones en documentos.", "fecha": "2026-11-24T13:45:32.048132+00:00"}

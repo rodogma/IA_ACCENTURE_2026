@@ -1,0 +1,90 @@
+{
+  "tipo": "medicion_retriever_sobre_indice_persistido",
+  "corpus": "Modulo_2/bloque_24 corpus maquinaria y agentes",
+  "relevancia": "una fuente relevante etiquetada por consulta",
+  "casos": [
+    {
+      "pregunta": "¿Qué maquinaria se recomienda para nivelar un terreno?",
+      "fuente_relevante": "maquinaria",
+      "fuentes_recuperadas_at_3": [
+        "maquinaria",
+        "agente",
+        "cimentacion"
+      ],
+      "precision_at_1": 1.0,
+      "recall_at_1": 1,
+      "f1_at_1": 1.0,
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1,
+      "f1_at_3": 0.5
+    },
+    {
+      "pregunta": "¿Qué equipos se utilizan para construir cimientos?",
+      "fuente_relevante": "cimentacion",
+      "fuentes_recuperadas_at_3": [
+        "cimentacion",
+        "maquinaria",
+        "agente"
+      ],
+      "precision_at_1": 1.0,
+      "recall_at_1": 1,
+      "f1_at_1": 1.0,
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1,
+      "f1_at_3": 0.5
+    },
+    {
+      "pregunta": "¿Cómo selecciona el agente la maquinaria?",
+      "fuente_relevante": "agente",
+      "fuentes_recuperadas_at_3": [
+        "agente",
+        "maquinaria",
+        "cimentacion"
+      ],
+      "precision_at_1": 1.0,
+      "recall_at_1": 1,
+      "f1_at_1": 1.0,
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1,
+      "f1_at_3": 0.5
+    },
+    {
+      "pregunta": "¿Cómo conserva el historial de conversación?",
+      "fuente_relevante": "memoria",
+      "fuentes_recuperadas_at_3": [
+        "memoria",
+        "aprobaciones",
+        "agente"
+      ],
+      "precision_at_1": 1.0,
+      "recall_at_1": 1,
+      "f1_at_1": 1.0,
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1,
+      "f1_at_3": 0.5
+    },
+    {
+      "pregunta": "¿Qué operaciones requieren aprobación humana?",
+      "fuente_relevante": "aprobaciones",
+      "fuentes_recuperadas_at_3": [
+        "aprobaciones",
+        "agente",
+        "memoria"
+      ],
+      "precision_at_1": 1.0,
+      "recall_at_1": 1,
+      "f1_at_1": 1.0,
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1,
+      "f1_at_3": 0.5
+    }
+  ],
+  "promedio": {
+    "precision_at_1": 1.0,
+    "recall_at_1": 1.0,
+    "f1_at_1": 1.0,
+    "precision_at_3": 0.3333333333333333,
+    "recall_at_3": 1.0,
+    "f1_at_3": 0.5
+  }
+}

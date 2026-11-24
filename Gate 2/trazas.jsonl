@@ -1,0 +1,34 @@
+{"timestamp": "2026-11-24T12:15:23.119071+00:00", "trace_id": "trace-88fafa5eb9", "evento": "consulta_recibida", "pregunta_len": 4}
+{"timestamp": "2026-11-24T12:15:23.125657+00:00", "trace_id": "trace-88fafa5eb9", "evento": "prompt_version", "huella": "b37784a61616"}
+{"timestamp": "2026-11-24T12:15:30.114873+00:00", "trace_id": "trace-88fafa5eb9", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 1003.46}
+{"timestamp": "2026-11-24T12:15:39.838650+00:00", "trace_id": "trace-88fafa5eb9", "evento": "consumo_latencia", "modo": "real", "tokens_entrada": 129, "tokens_salida": 19, "costo_usd": null, "recuperacion_ms": 1003.46, "generacion_ms": 9697.69, "total_ms": 16719.13}
+{"timestamp": "2026-11-24T12:20:21.432859+00:00", "trace_id": "trace-b50522553f", "evento": "consulta_recibida", "pregunta_len": 90}
+{"timestamp": "2026-11-24T12:20:21.437940+00:00", "trace_id": "trace-b50522553f", "evento": "prompt_version", "huella": "b37784a61616"}
+{"timestamp": "2026-11-24T12:20:24.214672+00:00", "trace_id": "trace-b50522553f", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 390.59}
+{"timestamp": "2026-11-24T12:20:25.873598+00:00", "trace_id": "trace-b50522553f", "evento": "consumo_latencia", "modo": "real", "tokens_entrada": 159, "tokens_salida": 63, "costo_usd": null, "recuperacion_ms": 390.59, "generacion_ms": 1639.1, "total_ms": 4440.53}
+{"timestamp": "2026-11-24T12:25:34.948373+00:00", "trace_id": "trace-389150f26f", "evento": "consulta_recibida", "pregunta_len": 105}
+{"timestamp": "2026-11-24T12:25:34.949478+00:00", "trace_id": "trace-389150f26f", "evento": "prompt_version", "huella": "b37784a61616"}
+{"timestamp": "2026-11-24T12:25:38.487427+00:00", "trace_id": "trace-389150f26f", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 957.33}
+{"timestamp": "2026-11-24T12:28:01.221944+00:00", "trace_id": "trace-5b0196180c", "evento": "consulta_recibida", "pregunta_len": 105}
+{"timestamp": "2026-11-24T12:28:01.223154+00:00", "trace_id": "trace-5b0196180c", "evento": "prompt_version", "huella": "b37784a61616"}
+{"timestamp": "2026-11-24T12:28:04.407359+00:00", "trace_id": "trace-5b0196180c", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 947.7}
+{"timestamp": "2026-11-24T12:28:08.119213+00:00", "trace_id": "trace-5b0196180c", "evento": "consumo_latencia", "modo": "real", "tokens_entrada": 160, "tokens_salida": 40, "costo_usd": null, "estado_costo": "tarifas_invalidas", "recuperacion_ms": 947.7, "generacion_ms": 3692.85, "total_ms": 6896.44}
+{"timestamp": "2026-11-24T12:29:06.187077+00:00", "trace_id": "", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 958.11}
+{"timestamp": "2026-11-24T12:29:07.055373+00:00", "trace_id": "", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 867.72}
+{"timestamp": "2026-11-24T12:29:07.406882+00:00", "trace_id": "", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 350.88}
+{"timestamp": "2026-11-24T12:29:07.961660+00:00", "trace_id": "", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 554.19}
+{"timestamp": "2026-11-24T12:29:08.295748+00:00", "trace_id": "", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 333.53}
+{"timestamp": "2026-11-24T12:30:24.578291+00:00", "trace_id": "", "evento": "supervision_prompt", "huella": "b37784a61616", "decision": "aprobada"}
+{"timestamp": "2026-11-24T12:32:05.968451+00:00", "trace_id": "trace-4b021c8868", "evento": "consulta_recibida", "pregunta_len": 61}
+{"timestamp": "2026-11-24T12:32:05.969482+00:00", "trace_id": "trace-4b021c8868", "evento": "prompt_version", "huella": "b37784a61616"}
+{"timestamp": "2026-11-24T12:32:10.198277+00:00", "trace_id": "trace-4b021c8868", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 1098.54}
+{"timestamp": "2026-11-24T12:32:11.805953+00:00", "trace_id": "trace-4b021c8868", "evento": "consumo_latencia", "modo": "real", "tokens_entrada": 153, "tokens_salida": 17, "costo_usd": 8.840000000000001e-05, "estado_costo": "calculado", "recuperacion_ms": 1098.54, "generacion_ms": 1586.26, "total_ms": 5836.8}
+{"timestamp": "2026-11-24T12:54:28.793854+00:00", "trace_id": "", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 1082.29}
+{"timestamp": "2026-11-24T12:54:29.718392+00:00", "trace_id": "", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 923.01}
+{"timestamp": "2026-11-24T12:54:30.177610+00:00", "trace_id": "", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 457.96}
+{"timestamp": "2026-11-24T12:54:30.614077+00:00", "trace_id": "", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 435.84}
+{"timestamp": "2026-11-24T12:54:31.102691+00:00", "trace_id": "", "evento": "documentos_recuperados", "recuperados": 3, "descartados_filtro": 0, "latencia_ms": 487.86}
+{"timestamp": "2026-11-24T12:54:54.724421+00:00", "trace_id": "trace-db74d15dde", "evento": "consulta_recibida", "pregunta_len": 61}
+{"timestamp": "2026-11-24T12:54:54.725281+00:00", "trace_id": "trace-db74d15dde", "evento": "prompt_version", "huella": "b37784a61616"}
+{"timestamp": "2026-11-24T12:54:59.759636+00:00", "trace_id": "trace-db74d15dde", "evento": "documentos_recuperados", "recuperados": 1, "descartados_filtro": 0, "latencia_ms": 951.49}
+{"timestamp": "2026-11-24T12:55:01.248175+00:00", "trace_id": "trace-db74d15dde", "evento": "consumo_latencia", "modo": "real", "tokens_entrada": 87, "tokens_salida": 14, "costo_usd": 6.11e-05, "estado_costo": "calculado", "recuperacion_ms": 951.49, "generacion_ms": 1452.51, "total_ms": 6522.49}
